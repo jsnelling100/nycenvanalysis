@@ -1,0 +1,5 @@
+cluster,Population,Households,PM25,Ozone,Diesel_PM,NO2,Toxic_Air_Releases,Superfund_Prox,RMP_Prox,HazWaste_Prox,Percent_HHLeadPaint,Traffic_Prox,DW_Noncomp,WW_Discharge,Socioecon_Percentile,HHVuln_Percentile,Minority_Percentile,HouseType_Percentile,Percent_DAC
+0,4104.6,1496.4,45.8,72.2,97.7,96.1,39.5,84.8,15.8,92.5,85.0,92.5,93.0,87.7,81.4,68.7,88.6,83.7,70.5050505050505
+1,3589.9,1281.4,36.4,66.5,92.2,69.4,47.0,69.5,26.6,80.5,74.9,76.0,93.0,37.1,55.0,60.5,57.8,64.3,29.53846153846154
+2,3087.1,1011.7,30.5,75.3,94.1,86.7,30.5,82.1,0.3,85.1,88.9,92.8,93.0,43.8,58.7,52.7,86.7,53.9,25.0
+3,4191.4,1924.0,48.5,70.3,98.3,97.3,45.0,93.9,20.3,96.4,81.5,93.6,93.0,91.1,37.0,19.2,54.1,78.5,26.052104208416832
