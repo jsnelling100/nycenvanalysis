@@ -6,25 +6,27 @@ This file recontextualizes the Disadvantaged Communities (DAC) Criteria approved
 
 ## Objectives
 
-### 1. Create an accessible, universal dataframe for use in analysis of NYC DAC characteristics
+### 1. Create an accessible, widely applicable dataframe for use in analysis of NYC DAC characteristics
 
 ### 2. Provide insight into the most vulnerable DAC census tracts in NYC using high quality U.S.-level percentile indicators
 
 ### 3. Visualize indicators and their spatial distribution across NYC and among DACs
 
 ## Background
-In 2023, New York's Climate Justice Working Group finalized the state's criteria for defining "disadvantaged communities" or environmental justice areas that are most vulnerable to the impacts of climate change. A wide variety of variables are used for this criteria, but 
+In 2023, New York's Climate Justice Working Group finalized the state's criteria for defining "disadvantaged communities" or environmental justice areas that are most vulnerable to the impacts of environmental harms and climate change. A wide variety of variables are used to create this criteria, but designations were developed using now retired census tracts (2010) with data from 2019. Through the incorporation of EJScreen and SVI data, these designations can be transitioned to 2020 tracts and analyzed with high quality indicators.  
 
-Several assumptions are made in the construction of the 'dacejssvi' dataframe:
-* A weight is not used in the conversion of DAC designations from 2010 to 2020 census tracts as the designation holds for tracts that were splintered into several in 2020. This could be addressed with further analysis 
+Several assumptions are made in the analysis:
+* A weight is not used in the conversion of DAC designations from 2010 to 2020 census tracts as the designation holds for tracts that were splintered into several in 2020. Understanding the suitability of the merge should be revisited in later analysis.
 
-* SVI is preferred as a means of measuring social vulnerability compared to indices in EJScreen as it is more comprehensive. 
+* SVI is preferred as a means of measuring social vulnerability compared to indices in EJScreen as it is more comprehensive. EJScreen does however have the majority of variables used in the SVI from similar sources, meaning the SVI could be avoided if only using EJScreen is preferred.
+
+* Environmental indicators are treated with equal weight despite not being equally impactful in reality (e.g., exposure to PM2.5 likely has more of an impact on health outcomes than distance to RMP facilities or Drinking Water Compliance as it is included in the dataset). Further analysis should find or attempt to develop a framework for weighing each indicator's impact.
 
 
 ## Input Data
 
 ### 1. U.S. Environmental Protection Agency's EJScreen Data by Census Tract in 2024 (csv)
-Retrieved from the Harvard Dataverse, the mapping tool hosted by the EPA is currently offline as of May 2025 but a cloned version is being hosted by the Public Environmental Data Partners (PEDP). Population and household measures along with percentile data for air pollution, water pollution, and proximity to environmental hazards (Super Fund sites, RMP facilities) at annual averages is subset. This dataset also includes individual EJ indices that combine EJScreen demographic characteristics with environmental indicators that were not used in this analysis. **While other input files are available on this Github page in 'input_data', this must be downloaded from the link due to file size restrictions**
+Retrieved from the Harvard Dataverse, the mapping tool hosted by the EPA is currently offline as of May 2025 but a cloned version is being hosted by the Public Environmental Data Partners (PEDP). Population and household measures along with percentile data for air pollution, water pollution, and proximity to environmental hazards (Super Fund sites, RMP facilities) at annual averages is subset. This dataset also includes individual EJ indices that combine EJScreen demographic characteristics with environmental indicators that were not used in this analysis. **While other input files are available on this Github page in 'input_data', this must be downloaded from the link due to file size restrictions.**
 
 **Link:** https://dataverse.harvard.edu/file.xhtml?fileId=10775979&version=4.0
 
@@ -36,7 +38,8 @@ Retrieved from the Harvard Dataverse, the mapping tool hosted by the EPA is curr
 Retrieved from ATSDR's site, indices for socioeconomic status, household characteristics, racial and ethnic minority status, and housing type and transportation were subset. The overall SVI score was also included for use in the ejanalysis.py script.
 
 **Link:** https://www.atsdr.cdc.gov/place-health/php/svi/svi-data-documentation-download.html
-2022 > United States > Census Tracts > CSV File (table data)
+
+Path: 2022 > United States > Census Tracts > CSV File (table data)
 
 **Data Description and Variable Dictionary:** https://svi.cdc.gov/map25/data/docs/SVI2022Documentation_ZCTA.pdf
 
@@ -84,7 +87,7 @@ This csv subsets some columns from dacejssvi.csv and incorporates the results of
 This csv subsets some columns from dacejssvi.csv and incorporates the cluster placements from the K-means analysis.
 
 ### 4. clustersumm.csv
-This csv shows the results of the cluster analysis by cluster, in addition to showing how DAC designations are apportioned among clusters
+This csv shows the results of the cluster analysis by cluster, in addition to showing how DAC designations are apportioned among clusters.
 
 ### 5. mapej.csv
 This csv provides a simplified dataframe for use in ejvisualize.py with the results from the cumburdej.csv and clusteredej.csv. 
@@ -109,4 +112,4 @@ This map shows how the resulting clusters of the K-means analysis are distribute
 
 
 ## Conclusions and Next Steps
-Further analysis should be done with data on policy interventions and environmental justice specific programs as made available. Analysis could be improved with adequate weighting incorporated for different indicators (e.g., providing greater weight to particulate matter 2.5 exposure compared to hazardous waste site proximity) and further investigation into the distribution of DAC designations among highly vulnerable areas. 
+Further analysis should be done with data on policy interventions and environmental justice specific programs as made available. Analysis could be improved with adequate weighting incorporated for different indicators (e.g., providing greater weight to particulate matter 2.5 exposure compared to hazardous waste site proximity) and further investigation into the quality of DAC designation distribution among highly vulnerable areas according to EJScreen and SVI indicators. 
