@@ -86,7 +86,7 @@ This csv subsets some columns from dacejssvi.csv and incorporates the cluster pl
 ### 4. clustersumm.csv
 This csv shows the results of the cluster analysis by cluster, in addition to showing how DAC designations are apportioned among clusters
 
-## 5. mapej.csv
+### 5. mapej.csv
 This csv provides a simplified dataframe for use in ejvisualize.py with the results from the cumburdej.csv and clusteredej.csv. 
 
 ## Figures and Results
