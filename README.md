@@ -24,7 +24,7 @@ Several assumptions are made in the construction of the 'dacejssvi' dataframe:
 ## Input Data
 
 ### 1. U.S. Environmental Protection Agency's EJScreen Data by Census Tract in 2024 (csv)
-Retrieved from the Harvard Dataverse, the mapping tool hosted by the EPA is currently offline as of May 2025 but a cloned version is being hosted by the Public Environmental Data Partners (PEDP). Population and household measures along with percentile data for air pollution, water pollution, and proximity to environmental hazards (Super Fund sites, RMP facilities) at annual averages is subset. This dataset also includes individual EJ indices that combine EJScreen demographic characteristics with environmental indicators that were not used in this analysis.
+Retrieved from the Harvard Dataverse, the mapping tool hosted by the EPA is currently offline as of May 2025 but a cloned version is being hosted by the Public Environmental Data Partners (PEDP). Population and household measures along with percentile data for air pollution, water pollution, and proximity to environmental hazards (Super Fund sites, RMP facilities) at annual averages is subset. This dataset also includes individual EJ indices that combine EJScreen demographic characteristics with environmental indicators that were not used in this analysis. **While other input files are available on this Github page in 'input_data', this must be downloaded from the link due to file size restrictions**
 
 **Link:** https://dataverse.harvard.edu/file.xhtml?fileId=10775979&version=4.0
 
